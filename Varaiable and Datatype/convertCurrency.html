@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form>
+            Amount
+            <input type="text" id="amount">
+            From curency
+            <select id="fromcurrency">
+                <option value="VND">VND</option>
+                <option value="USD" selected>USD</option>
+            </select>
+            To curency
+            <select id="tocurrency">
+                <option value="USD">USD</option>
+                <option value="VND" selected>VND</option>
+            </select >
+            <button type="button" onclick="convert()">Convert</button>
+            <p id="ketqua"></p>
+            <script>
+                function convert(){
+                    var amount = document.getElementById("amount").value;
+                    var fromcurrency = document.getElementById("fromcurrency").value;
+                    var tocurrency = document.getElementById("tocurrency").value;
+                    var kqua = "" ;
+                    if(amount == "" )
+                    {
+                        alert("vui lòng nhập số tiền cần chuyển đổi")
+                    }
+                    else
+                    {
+                        if(fromcurrency=="VND" && tocurrency=="USD"){
+                            kqua = amount/23000;
+                            document.getElementById("ketqua").innerHTML= kqua;
+                        }else if(fromcurrency=="USD" && tocurrency=="VND"){
+                            kqua =amount*23000;
+                            document.getElementById("ketqua").innerHTML = kqua;
+                        }
+                    }
+                }
+            </script>
+        </form>
+    </body>
+</html>
