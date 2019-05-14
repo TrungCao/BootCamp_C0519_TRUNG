@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFWuW6v5C0zd2pfYInpH0egDCk0L9eJUgiew3iUjyBNCeu_Q-lLQ" id ="img1" name = "images1" onclick="click1()" width="200" height="200" >
+        <br>
+        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdI-hWIwk_FKBR0pVae9AARTbXNKLSBlCFiC6m7dzWUAI4uvF2" id ="img2" name = "images2" onclick="click2()" width="200" height="200" >
+        <p id="d1" ></p>
+        <script>
+            function click1() {
+                let imgObj1=document.getElementById('img1');
+                   if( imgObj1.src=="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFWuW6v5C0zd2pfYInpH0egDCk0L9eJUgiew3iUjyBNCeu_Q-lLQ"){
+                       imgObj1.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdI-hWIwk_FKBR0pVae9AARTbXNKLSBlCFiC6m7dzWUAI4uvF2";
+                       imgObj1.name = 'images2';
+                   } else {
+                       imgObj1.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFWuW6v5C0zd2pfYInpH0egDCk0L9eJUgiew3iUjyBNCeu_Q-lLQ";
+                       imgObj1.name = 'images1'
+                   }
+                   if(imgObj1.name == document.getElementById('img2').name){
+                        document.getElementById('d1').innerHTML="OO0000000000O";
+                    } else{
+                        document.getElementById('d1').innerHTML="";
+            }
+            }
+            function click2() {
+                let imgObj2=document.getElementById('img2');
+                   if( imgObj2.src=="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdI-hWIwk_FKBR0pVae9AARTbXNKLSBlCFiC6m7dzWUAI4uvF2"){
+                       imgObj2.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFWuW6v5C0zd2pfYInpH0egDCk0L9eJUgiew3iUjyBNCeu_Q-lLQ";
+                       imgObj2.name= 'images1';
+                       
+                   } else {
+                       imgObj2.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdI-hWIwk_FKBR0pVae9AARTbXNKLSBlCFiC6m7dzWUAI4uvF2"; 
+                       imgObj2.name= 'images2';
+                   }
+                   if(document.getElementById('img1').name == imgObj2.name){
+                         document.getElementById('d1').innerHTML="OO0000000000O";
+                    } else{
+                         document.getElementById('d1').innerHTML="";     
+            }
+            }
+           
+            
+        </script>
+    </body>
+</html>
