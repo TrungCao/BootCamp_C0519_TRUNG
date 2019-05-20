@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+// Chưa xong
+<html>
+    <head>
+        <style>
+        table,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            
+        }
+        td {
+            padding: 35px;
+        }
+        
+        </style>
+    </head>
+    <h3>Tic Tac Toe</h3>
+    <p id="tic"></p>
+    <input type = "button" value = "Change value(X)" onclick="changevaluex()">
+    <input type = "button" value = "Change value(O)" onclick="changevalueo()">
+    <body>
+        <script>
+            let b = document.getElementById("tic");
+            let board = [];
+            let data = "<table>";
+            for(let i = 0 ; i< 5 ; i++){
+                board[i] = new Array("&nbsp&nbsp&nbsp","&nbsp&nbsp&nbsp","&nbsp&nbsp&nbsp","&nbsp&nbsp&nbsp","&nbsp&nbsp&nbsp")
+            }
+            for(let i = 0 ; i< 5 ; i++){
+                data += "<tr>";
+                for(let j = 0; j<5; j++){
+                    data += "<td>" +board[i][j]+ "</td>";
+                }
+            }
+            
+            b.innerHTML ="</table>"  +data;
+
+            function changevaluex(){
+                data = "<table >";
+                let positionx = prompt("nhap hang: ");
+                let positiony = prompt("nhap cot: ")
+                board[positionx][positiony] = "X";
+                for(let i = 0 ; i< 5 ; i++){
+                    data += "<tr>";
+                    for(let j = 0; j<5; j++){
+                        data += "<td>" +board[i][j]+ "</td>";
+                    }
+                }
+                b.innerHTML ="</table>"  +data;
+            }
+
+            function changevalueo(){
+                data = "<table >";
+                let positionx = prompt("nhap hang: ");
+                let positiony = prompt("nhap cot: ")
+                board[positionx][positiony] = "O";
+                for(let i = 0 ; i< 5 ; i++){
+                    data += "<tr>";
+                    for(let j = 0; j<5; j++){
+                        data += "<td>" +board[i][j]+ "</td>";
+                    }
+                }
+                b.innerHTML ="</table>"  +data;
+            }
+
+
+
+        </script>
+    </body>
+</html>

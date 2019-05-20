@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var str='AxCdeeePP';
+            var Upper ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var Lower ='abcdefghijklmnopqrstuvwxyz';
+            var result = [];
+
+            for(var i = 0; i <str.length; i++){
+                if(Upper.indexOf(str[i]) !== -1){
+                    result.push(str[i].toLowerCase());
+                } else if(Lower.indexOf(str[i]) !== -1){
+                    result.push(str[i].toUpperCase());
+                } else {
+                    result.push(str[i]);
+                }
+            }
+            console.log(result.join(''));
+        </script>
+    </body>
+</html>

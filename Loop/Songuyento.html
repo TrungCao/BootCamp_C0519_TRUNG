@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+               let number = parseInt(prompt("Mời nhập số: "))
+               let count = 0;
+               let N = 2;
+               document.write(+number+" số nguyên tố đầu tiên là: ")
+                while(count<number){
+                    if(timSoNguyenTo(N)){
+                        count++;
+                        document.write(+N+" ");
+                    }
+                    N++;
+                }
+                function timSoNguyenTo(n){
+                    if(n<2){
+                        return false;
+                    }
+                    for(var i = 2 ; i< Math.sqrt(n); i++){
+                        if(n%i==0){
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+        </script>
+    </body>
+</html>

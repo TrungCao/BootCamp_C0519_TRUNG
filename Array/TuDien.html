@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type = "text" id= "words" ></input>
+        <button type="button" onclick="search()">Search</button>
+        <p id="result"></p>
+        <script>
+            function search(){
+                var English = ["hello","goodbye","thank you"];
+                var Viet = ["xin chào","tạm biệt","cảm ơn"];
+                let count = 0;
+                var a = document.getElementById("words").value;
+                for(var i= 0; i<English.length ; i++){
+                    if(a == English[i]){
+                        alert(Viet[i]);
+                        count ++;
+                    }
+                    document.getElementById("words").value ="";
+                }
+                if(count == 0){
+                    alert("ko co");
+                    document.getElementById("words").value="";
+                }
+
+            }
+        </script>
+    </body>
+</html>
