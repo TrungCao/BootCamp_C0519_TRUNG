@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="text" id="number1" placeholder="Số a"><br>
+        <input type="text" id="number2" placeholder="Số b">
+        <input type="button" onclick="checkNumber()" value ="Check">
+        <script>
+                function checkNumber(a,b){
+                    a = parseInt(document.getElementById("number1").value);
+                    b = parseInt(document.getElementById("number2").value);
+                    if(a>b){
+                        alert(a+">"+b)
+                    } else{
+                        alert(a+b);
+                    }
+                }
+            </script>
+    </body>
+</html>

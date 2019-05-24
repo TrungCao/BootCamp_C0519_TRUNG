@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Chuyen doi feet sang meters:
+        <input type = "text" id = "inputfeet" oninput="feet()">
+        <span id = "result1"></span>
+        </p>
+        <p>Chuyen doi meters sang feet:
+        <input type = "text" id = "inputmeters">
+        <button type = "button" onclick ="meters()">Convert</button>
+        <span id = "result2"></span>
+        </p>
+        <script>
+            function feet(){
+                let numfeet = document.getElementById("inputfeet").value ;
+                let result = 0.305*numfeet;
+                document.getElementById("result1").innerHTML = result;
+            }
+            function meters(){
+                let nummeter = document.getElementById("inputmeters").value ;
+                let result =  3.279*nummeter;
+                document.getElementById("result2").innerHTML = result;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+        <script>
+            function Rectangle(x,y){
+                this.x = x;
+                this.y = y;
+                this.getX = function(){
+                    return this.x;
+                }
+                this.getY = function(){
+                    return this.y;
+                }
+                this.setX = function(x){
+                    this.x = x;
+                }
+                this.setY = function(y){
+                    this.y = y;
+                }
+                this.getArea = function(){
+                    return this.x*this.y;
+                }
+                this.getPer = function(){
+                    return (this.x+this.y)*2;
+                }
+                this.HienthiHcn= function(){
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(0,0,this.x,this.y);
+            }
+            }
+            var rectangle = new Rectangle(60,50);
+            rectangle.HienthiHcn();
+            alert("dien tich: "+rectangle.getArea()+"--chu vi:"+rectangle.getPer());
+
+        </script>
+    </body>
+</html>

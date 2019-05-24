@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type = "text" id = "num" oninput="number()"/>
+        <p id = "result"></p>
+        <script>
+            function number(n){
+                n = document.getElementById("num").value;
+                n++;
+                return document.getElementById("result").innerHTML = n
+            }
+        </script>
+    </body>
+</html>

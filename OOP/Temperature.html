@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Đổi nhiệt độ</title>
+    </head>
+    <body>
+        <p id="result1" ></p>
+        <p id= "result2"></p>
+        <script>
+            function Temperature(c){
+                this.c = c;
+                this.getF = function(){
+                    return (this.c*1.8)+32;
+                }
+                this.getK = function(){
+                    return this.c+273;
+                }
+            }
+            var nhietDo =parseFloat(prompt("Nhap nhiet do: "))
+            var t1 = new Temperature(nhietDo);
+            
+            document.getElementById("result1").innerHTML = "Chuyển sang độ F là: "+t1.getF();
+            document.getElementById("result2").innerHTML = "Chuyển sang độ K là: "+t1.getK();
+            
+        </script>
+    </body>
+</html>

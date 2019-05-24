@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let a = prompt("Nhập tên ngôi sao: ");
+            function check(str){
+                let star = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+                let chom = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+                for(let i = 0 ; i< star.length; i++){
+                    if( str == star[i]){
+                        return chom[i]
+                    } else{
+                        return "Khong co"
+                    }
+                }
+            }
+            alert(check(a));
+        </script>
+    </body>
+</html>
