@@ -1,0 +1,12 @@
+<script src="mobile.js" ></script>
+<script>
+    let ON = true;
+    let nokia = new Mobile("Nokia", ON);
+    let iphone = new Mobile("Iphone XS", ON);
+
+    nokia.write("Hello IPhone XS");
+    nokia.send(iphone);
+
+    iphone.showInbox();
+    nokia.showSent();
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dem tu trong chuoi</title>
+    </head>
+    <body>
+        <input type = "text" id = "input">
+        <button type = "button" onclick = "output()">Count Word</button>
+        <p id= "result"></p>
+        <script>
+            function output(str){
+                str = document.getElementById("input").value;
+                let text = str.trim();
+                let count = 1;
+                for(let i = 0; i< text.length ; i++){
+                    if(text.charAt(i) == " " && text.charAt(i+1)!=" " ){
+                        count++ ;
+                    }
+                }
+                document.getElementById("result").innerHTML = count;
+            }
+        </script>
+    </body>
+</html>

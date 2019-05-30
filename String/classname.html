@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Validate tên của lớp học</title>
+    </head>
+    <body>
+        <input type = "type" id = "input" >
+        <button type="button" onclick="checkClassName()">Check</button>
+        <p id= "result"></p>
+        <script>
+
+            
+            function checkClassName(input){
+                input = document.getElementById("input").value;
+                regexp = /^[CAP]{1}[0-9]{4}[GHIKLM]{1}$/;
+                if(regexp.test(input)){
+                    document.getElementById("result").innerHTML = "Hợp lệ";
+                } else{
+                    document.getElementById("result").innerHTML = " Không hợp lệ";
+                }
+            }
+        </script>
+    </body>
+</html>

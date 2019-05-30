@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dem tu trong chuoi</title>
+    </head>
+    <body>
+        <input type = "text" id = "input">
+        <button type = "button" onclick = "output()">Count Word</button><br>
+        <div>
+            <label>Số nguyên âm: </label><span id = "result1"></span>
+        </div>
+        <div>
+            <label>Số phụ âm   : </label><span id = "result2"></span>
+        </div>
+     
+        
+        <script>
+            function output(str){
+                str = document.getElementById("input").value;
+                let count = 0;
+                let a = 0;
+                for(let i = 0; i< str.length ; i++){
+                    if(str.charAt(i) == "u" || str.charAt(i)=="e" || str.charAt(i)=="o" || str.charAt(i)=="a" || str.charAt(i) == "i"){
+                        count++ ;
+                    }
+                }
+                a = str.length - count;
+                document.getElementById("result1").innerHTML = count;
+                document.getElementById("result2").innerHTML = a;
+            }
+        </script>
+    </body>
+</html>

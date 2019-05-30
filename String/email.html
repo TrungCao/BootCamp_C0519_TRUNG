@@ -1,0 +1,21 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Validate email</title>
+        </head>
+        <body>
+            <script>
+                function chekEmail(str){
+                    regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+                    if(regexp.test(str)){
+                        return true;
+                    }
+                    return false;
+                }
+
+                var email = "trung96@gmail.com";
+                console.log(chekEmail(email));
+            </script>
+        </body>
+    </html>

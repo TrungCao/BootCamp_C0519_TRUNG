@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Cong tac Bong den</title>
+    </head>
+    <body>
+        <script>
+            function ElectricLamp(){
+                this.status;
+                this.turnOff = function(){
+                    this.status = false;
+                    console.log("den tat");
+                };
+
+                this.turnOn = function(){
+                    this.status = true;
+                    console.log("den bat");
+                };
+            }
+
+            function SwitchButton(){
+                this.status;
+
+                this.switchOff = function(){
+                    this.status = false;
+                };
+
+                this.switchOn = function(){
+                    this.status = true;
+                };
+
+                this.connectToLamp = function(lamp){
+                    if(this.status == true){
+                        lamp.turnOn();
+                    } else if(this.status == false){
+                        lamp.turnOff();
+                    }
+                };
+
+            }
+
+            let lamp = new ElectricLamp();
+            let button = new SwitchButton();
+            button.switchOff();
+            button.connectToLamp(lamp);
+            
+        </script>
+    </body>
+</html>
