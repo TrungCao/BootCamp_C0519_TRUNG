@@ -5,20 +5,32 @@
         <title>Dem tu trong chuoi</title>
     </head>
     <body>
-        <input type = "text" id = "input">
-        <button type = "button" onclick = "output()">Count Word</button>
-        <p id= "result"></p>
         <script>
-            function output(str){
-                str = document.getElementById("input").value;
-                let text = str.trim();
-                let count = 1;
-                for(let i = 0; i< text.length ; i++){
-                    if(text.charAt(i) == " " && text.charAt(i+1)!=" " ){
-                        count++ ;
+            function binarySearch(x){
+                let arr = [];
+                let min = 0;
+                let max = arr.length - 1;
+                let mid =0;
+
+                while(max>=min){
+                    mid = (min + max)/2;
+                    if(arr[mid]== x){
+                        return mid;
+                    }else if(arr[mid]<x){
+                        min = mid + 1;
+                    }else{
+                        max = mid -1;
                     }
+                    return -1;
                 }
-                document.getElementById("result").innerHTML = count;
+
+
+                
+  
+    // We reach here when element is not 
+    // present in array 
+    return -1; 
+} 
             }
         </script>
     </body>
