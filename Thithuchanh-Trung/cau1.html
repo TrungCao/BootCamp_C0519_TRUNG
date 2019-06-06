@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tìm min</title>
+    </head>
+    <body>
+        <script>
+            function findMinScore(arr){
+                var min = arr[0];
+              for(var i =0; i< arr.length - 1; i++){
+                if(min > arr[i]){
+                    min = arr[i];
+                }
+              }
+              return min;
+            }
+            let array = [10,5,2,8,-1,6,8];
+            console.log(findMinScore(array));
+        </script>
+    </body>
+</html>

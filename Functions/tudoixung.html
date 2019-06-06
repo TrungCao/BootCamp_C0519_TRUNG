@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kiem tra tu doi xung</title>
+    </head>
+    <body>
+        <input type = "text" id = "input">
+        <button type = "button" onclick = " check()">Check</button>
+        <p id = "result"></p>
+        <script>
+            function isPalindrome(){
+                var str = document.getElementById("input").value;
+                var n = 0;
+                for(var i = 0; i < str.length/2;i++){
+                    if(str[i]!=str[str.length-1-n]){
+                        return false;
+                    }
+                    n++;
+                }
+                return true;
+            }
+            function check(){
+                if(isPalindrome()){
+                    document.getElementById("result").innerHTML="Đối xứng";
+                }else{
+                    document.getElementById("result").innerHTML="Không đối xứng";
+                }
+            }
+          
+            
+        </script>
+    </body>
+</html>
